@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<html  xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:h="http://java.sun.com/jsf/html" 
+	   xmlns:f="http://java.sun.com/jsf/core" 
+	   xmlns:p="http://primefaces.org/ui" >
+  
+<h:head>
+ <title>Cadastro de produtos</title>
+ <link rel="StyleSheet" type="text/css" href="css/style.css" />
+</h:head>
+<h:body styleClass="index">
+ <h1>Cadastro de produtos</h1>
+ <hr />
+ <h:form id="form">
+ 
+  <h:message />
+   <h:inputHidden value="#{produtoBean.produto.id}"/>   
+   <h:panelGrid columns="2">  
+   
+   	 <h:outputLabel value="Código : " for="codigo"></h:outputLabel>
+   	 <h:inputText id="codigo" label="Codigo" value="#{produtoBean.produto.codigo}" required="true"></h:inputText>
+   	 
+     <h:outputLabel value="Nome :" for="nome" />
+     <h:inputText id="nome" label="Nome" value="#{produtoBean.produto.nome}" required="true" />
+     
+     <h:outputLabel value="Descrição : " for="descricao"></h:outputLabel>
+     <h:inputText id="descricao" label="Descricao" value="#{produtoBean.produto.descricao}" required="true"></h:inputText>
+ 	
+ 	 <h:outputLabel value="Preço : " for="preco"></h:outputLabel>
+ 	 <p:spinner id="spinner" value="#{produtoBean.produto.preco}"> </p:spinner>
+ 	
+ 	 <h:outputLabel value="Categoria : " for="categoria"></h:outputLabel>
+     <h:inputText id="categoria" label="categorai" value="#{produtoBean.produto.categoria}"></h:inputText>		
+ 		
+ 	<p:growl id="growl" showDetail="true" sticky="true" />
+ 		 <h:panelGrid columns="2"> 
+         <p:commandButton value="Salvar" styleClass="cor-botao" action="#{produtoBean.salvar}" update="@form" icon="ui-icon-disk" title="Icon Only" />
+         <p:commandButton value="Voltar" styleClass="cor-botao" action="#{produtoBean.bemvindo}"/>
+        </h:panelGrid>
+    
+   </h:panelGrid>
+  
+ </h:form>
+ <hr />
+</h:body>
+</html>

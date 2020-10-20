@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:h="http://java.sun.com/jsf/html" 
+	   xmlns:f="http://java.sun.com/jsf/core" 
+	   xmlns:p="http://primefaces.org/ui" >
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Lista de produtos</title>
+ <link rel="StyleSheet" type="text/css" href="css/style.css" />
+</h:head>
+
+<h:body styleClass="listar">
+	<h1 class="alinha">Lista de produtos cadastrados</h1>
+	<h:form>
+	<p:dataTable var="p" value="#{produtoBean.produtos}">
+                <p:column headerText="Codigo">
+                    <h:outputText value="#{p.codigo}" />
+                </p:column>
+                <p:column headerText="Nome">
+                    <h:outputText value="#{p.nome}" />
+                </p:column>
+
+                <p:column headerText="Preço">
+                    <h:outputText value="#{p.preco}" />
+                </p:column>
+                <p:column headerText="Descrição">
+                    <h:outputText value="#{p.descricao}" />
+                </p:column>
+                <p:column headerText="Categoria">
+                    <h:outputText value="#{p.categoria}" />
+                </p:column>
+            </p:dataTable>
+	
+
+    <p:commandButton value="Voltar" styleClass="cor-botao" action="#{produtoBean.bemvindo}"></p:commandButton>
+	</h:form>
+	
+
+</h:body>
+</html>

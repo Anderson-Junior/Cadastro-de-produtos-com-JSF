@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<html  xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:h="http://java.sun.com/jsf/html" 
+	   xmlns:f="http://java.sun.com/jsf/core" 
+	   xmlns:p="http://primefaces.org/ui" >
+  
+<h:head>
+ <title>Bem Vindo</title>
+ <link rel="StyleSheet" type="text/css" href="css/style.css" />
+</h:head>
+<h:body styleClass="index">
+ <h1>Seja bem vindo!</h1>
+ <h3>Deseja cadastrar novos produtos ou visualizar os cadastrados?</h3>
+ <hr />
+ <h:form id="form">
+ 
+  <h:message />
+   <h:inputHidden value="#{produtoBean.produto.id}"/>   
+   <h:panelGrid columns="1">  
+   		<p:commandButton styleClass="cor-botao" value="Cadastrar novos" action="#{produtoBean.index}"></p:commandButton>
+   		<p:commandButton styleClass="cor-botao" value="Visualizar produtos cadastrados" action="#{produtoBean.lista}"></p:commandButton>
+	 
+   </h:panelGrid>
+  
+ </h:form>
+ <hr />
+</h:body>
+</html>

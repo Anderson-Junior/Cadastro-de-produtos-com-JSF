@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf16026365567450" configfile="/TranbalhoPrimeFaces/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="b" id="pf16027917546721" referenceLink="//@navigationRule.1/@navigationCase.1/@toViewId|" outlinks="pf16027917546722 pf16027939360080" inlinks="pf16027945898432" path="/bemVindo.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" id="pf16027917546723" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf16027945898432" inlinks="pf16027917546722" path="/index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="listar.xhtml" id="pf16027939360081" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf16027939360080" path="/listar.xhtml"/>
+  <links id="pf16027917546722" target="pf16027917546723" source="pf16027917546721" outcome="index"/>
+  <links id="pf16027939360080" target="pf16027939360081" source="pf16027917546721" outcome="listar"/>
+  <links id="pf16027945898432" target="pf16027917546721" source="pf16027917546723" outcome="bemVindo"/>
+</pageflow:Pageflow>
